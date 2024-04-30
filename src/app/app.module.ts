@@ -3,12 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PokemonsFormComponent } from './pokemons-form/pokemons-form.component';
+import { CardComponent } from './pokemons/card/card.component';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PokemonsFormComponent
+    CardComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,

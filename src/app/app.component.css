@@ -1,3 +1,41 @@
-#searchType::placeholder {
+input::placeholder {
     color:white;
+}
+
+.pokemon-grid {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(1fr);
+    grid-column-gap: 50px;
+    grid-row-gap: 20px;
+} @media (max-width: 1420px) {
+    .pokemon-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    @media (max-width: 940px) {
+        .pokemon-grid {
+        grid-template-columns: repeat(2, 1fr);
+        }
+        
+        @media (max-width: 500px) {
+        .pokemon-grid {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    #searchType {
+        margin-left: 5px;
+        width: 100%;
+    }
+    .add-pokemon {
+        width: 100%;
+    }
+    .title {
+        font-size: larger;
+    }
 }
