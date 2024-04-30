@@ -4,7 +4,7 @@
 
 <section class="flex justify-around mt-5">
     <div>
-        <input list="type" type="text" id="searchType" placeholder="Buscar..." class="rounded-lg bg-blue-400 outline-none p-2 text-white mr-3"/>
+        <input list="type" type="text" id="searchType" placeholder="Buscar..." class="rounded-lg bg-blue-400 hover:bg-blue-500 outline-none p-2 text-white mr-3"/>
             <datalist id="type">
                 <option value="Acero">
                 <option value="Agua">
@@ -27,13 +27,11 @@
             </datalist>
     </div>
     <div class="ml-3 add-pokemon">
-        <button (click)="openModal()" class="bg-blue-400 text-white rounded-lg flex p-2">Agregar un pokemon
+        <button (click)="openModal()" class="bg-blue-400 hover:bg-blue-500 text-white rounded-lg flex p-2">Agregar un pokemon
             <span class="material-symbols-rounded font-extrabold">add</span>
         </button>
         <div *ngIf="modalSwitch == true"><app-modal></app-modal></div>
     </div>
 </section>
 
-<div class="pokemon-grid">
-    <app-card></app-card>
-</div>
+<router-outlet></router-outlet>
