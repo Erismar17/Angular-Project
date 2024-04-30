@@ -1,0 +1,36 @@
+@keyframes moveCard {
+    0% { transform: translateY(0); }
+    25% { transform: translateY(-5px); }
+    50% { transform: translateY(-10px); }
+    75% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+  
+.card:hover {
+animation: moveCard 0.3s ease-in-out;
+}
+
+.pokemon-grid {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(1fr);
+    grid-column-gap: 50px;
+    grid-row-gap: 20px;
+} @media (max-width: 1420px) {
+    .pokemon-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    @media (max-width: 940px) {
+        .pokemon-grid {
+        grid-template-columns: repeat(2, 1fr);
+        }
+        
+        @media (max-width: 500px) {
+        .pokemon-grid {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        }
+    }
+}
