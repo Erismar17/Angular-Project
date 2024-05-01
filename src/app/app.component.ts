@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ModalSwitchService } from './service/modal-switch.service';
+import { ModalSwitchService } from './services/modalService/modal-switch.service';
 
 @Component({
   selector: 'app-root',

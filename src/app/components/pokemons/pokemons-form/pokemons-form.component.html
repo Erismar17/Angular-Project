@@ -1,1 +1,51 @@
-<p>pokemons-form works!</p>
+<div class="fixed inset-0 bg-black bg-opacity-30 flex justify-center items-center z-10">
+    <div class="flex flex-col items-center bg-gray-200 border border-gray-200 rounded-lg shadow p-10">
+    <h1 class="font-semibold text-xl text-center">Formulario para agregar un Pokémon</h1>
+        <form (submit)="addPokemon(pokemonNumber, pokemonNumberByRegion, pokemonImg, pokemonName, pokemonType)" class="flex flex-col mt-5">
+            <input #pokemonNumber type="number" placeholder="Número de Pokémon" class="rounded-lg bg-blue-400 outline-none p-2 text-white my-2">
+            <input #pokemonNumberByRegion type="number" placeholder="Número de Pokémon de la región" class="rounded-lg bg-blue-400 outline-none p-2 text-white my-2">
+            <label for="uploadFile" class="rounded-lg bg-blue-400 outline-none p-2 text-white my-2">Imagen del Pokémon:</label>
+            <div class="">
+                <label id="uploadFile"
+                    class="bg-white text-base rounded w-80 h-52 flex flex-col items-center justify-center cursor-pointer border-2 border-gray-300 border-dashed mx-auto my-2" required>
+                    <svg xmlns="http://www.w3.org/2000/svg" class=" fill-black" viewBox="0 0 32 32">
+                        <path
+                        d="M23.75 11.044a7.99 7.99 0 0 0-15.5-.009A8 8 0 0 0 9 27h3a1 1 0 0 0 0-2H9a6 6 0 0 1-.035-12 1.038 1.038 0 0 0 1.1-.854 5.991 5.991 0 0 1 11.862 0A1.08 1.08 0 0 0 23 13a6 6 0 0 1 0 12h-3a1 1 0 0 0 0 2h3a8 8 0 0 0 .75-15.956z"
+                        data-original="#000000" />
+                        <path
+                        d="M20.293 19.707a1 1 0 0 0 1.414-1.414l-5-5a1 1 0 0 0-1.414 0l-5 5a1 1 0 0 0 1.414 1.414L15 16.414V29a1 1 0 0 0 2 0V16.414z"
+                        data-original="#000000" />
+                    </svg>
+                    Upload file
+                    <input #pokemonImg type="file" id='uploadFile1' class="hidden" />
+                    <p class="text-xs text-gray-400 mt-2">PNG & JPG are Allowed</p>
+                </label>
+            </div>
+            <input #pokemonName type="text" placeholder="Nombre del Pokémon" class="rounded-lg bg-blue-400 outline-none p-2 text-white my-2">
+            <div class="flex justify-between">
+                <label class="rounded-lg bg-blue-400 outline-none p-2 text-white">Tipo de Pokémon:</label>
+                    <select #pokemonType class="rounded-lg bg-blue-400 text-white">
+                        <option>Acero</option>
+                        <option>Agua</option>
+                        <option>Bicho</option>
+                        <option>Dragón</option>
+                        <option>Eléctrico</option>
+                        <option>Fantasma</option>
+                        <option>Fuego</option>
+                        <option>Hada</option>
+                        <option>Hielo</option>
+                        <option>Lucha</option>
+                        <option>Normal</option>
+                        <option>Planta</option>
+                        <option>Psíquico</option>
+                        <option>Roca</option>
+                        <option>Siniestro</option>
+                        <option>Tierra</option>
+                        <option>Veneno</option>
+                        <option>Volador</option>
+                    </select>
+            </div>
+            <button class="rounded-lg bg-blue-400 hover:bg-blue-500 outline-none p-2 text-white mt-5" (click)="closeModal()">Guardar</button>
+        </form>    
+    </div>
+</div>
