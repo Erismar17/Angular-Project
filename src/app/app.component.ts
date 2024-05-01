@@ -7,7 +7,6 @@ import { ModalSwitchService } from './services/modalService/modal-switch.service
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
-
   modalSwitch: boolean = false;
 
   constructor(private modalSwitchS: ModalSwitchService){

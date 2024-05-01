@@ -34,7 +34,6 @@ export class PokemonsFormComponent {
                   pokemonType: pokemonType.value
                 });
     this.closeModal();
-    window.location.reload();
     return false;
   }
 }

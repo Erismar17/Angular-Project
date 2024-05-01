@@ -21,6 +21,7 @@ export class PokemonInfService {
   }
 
   addPokemon(pokemon: Pokemon) {
+    this.pokemons.push(pokemon);
     let pokemons: Pokemon[] = [];
     if (localStorage.getItem('pokemons') === null) {
       pokemons.push(pokemon)
@@ -30,9 +31,5 @@ export class PokemonInfService {
       pokemons.push(pokemon);
       localStorage.setItem('pokemons', JSON.stringify(pokemons));
     }
-  }
-
-  getPokemonById () {
-    this.pokemons.filter((pokemon)=>pokemon.pokemonNumber == 19)
   }
 }
