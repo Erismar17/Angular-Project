@@ -7,41 +7,29 @@ import { Pokemon } from '../../models/pokemon';
 export class PokemonInfService {
   pokemons: Pokemon[];
   constructor() {
-    this.pokemons = [
-      {
-        pokemonNumber: 1,
-        pokemonNumberByRegion: 2,
-        pokemonName: 'Ara',
-        pokemonType: 'Agua'
-      },
-      {
-        pokemonNumber: 124,
-        pokemonNumberByRegion: 543,
-        pokemonName: 'Flamita',
-        pokemonType: 'Fuego'
-      },      
-      {
-        pokemonNumber: 239,
-        pokemonNumberByRegion: 263,
-        pokemonName: 'Terra',
-        pokemonType: 'Tierra'
-      },
-      {
-        pokemonNumber: 19,
-        pokemonNumberByRegion: 19,
-        pokemonName: 'Andrés',
-        pokemonType: 'Fuego'
-      },
-    ];
+    this.pokemons = [ ];
   }
 
   getPokemon () {
-    return this.pokemons;
+    // localStorage.removeItem('pokemons');
+    if (localStorage.getItem('pokemons') === null) {
+      return this.pokemons;
+    } else {
+      this.pokemons = JSON.parse(localStorage.getItem('pokemons')||'');
+      return this.pokemons;
+    }
   }
 
   addPokemon(pokemon: Pokemon) {
-    this.pokemons.push(pokemon);
-    return false;
+    let pokemons: Pokemon[] = [];
+    if (localStorage.getItem('pokemons') === null) {
+      pokemons.push(pokemon)
+      localStorage.setItem('pokemons', JSON.stringify(pokemons));
+    } else {
+      pokemons = JSON.parse(localStorage.getItem('pokemons')||'');
+      pokemons.push(pokemon);
+      localStorage.setItem('pokemons', JSON.stringify(pokemons));
+    }
   }
 
   getPokemonById () {

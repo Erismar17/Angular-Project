@@ -33,6 +33,8 @@ export class PokemonsFormComponent {
                   pokemonName: pokemonName.value,
                   pokemonType: pokemonType.value
                 });
+    this.closeModal();
+    window.location.reload();
     return false;
   }
 }
