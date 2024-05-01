@@ -3,9 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CardComponent } from './pokemons/card/card.component';
-import { ModalComponent } from './modal/modal.component';
-import { PokemonsDetailsComponent } from './pokemons/pokemons-details/pokemons-details.component';
+import { CardComponent } from './components/pokemons/card/card.component';
+import { ModalComponent } from './components/modal/modal.component';
+import { PokemonsDetailsComponent } from './components/pokemons/pokemons-details/pokemons-details.component';
+
 
 @NgModule({
   declarations: [
