@@ -26,12 +26,15 @@ export class PokemonsFormComponent {
               pokemonNumberByRegion: HTMLInputElement,
               pokemonImg: HTMLInputElement,
               pokemonName: HTMLInputElement,
-              pokemonType: HTMLSelectElement) {
+              pokemonType: HTMLSelectElement,
+              pokemonColor: HTMLSelectElement,
+              ) {
                 this.pokemonService.addPokemon({
                   pokemonNumber: parseInt(pokemonNumber.value),
                   pokemonNumberByRegion: parseInt(pokemonNumberByRegion.value),
                   pokemonName: pokemonName.value,
-                  pokemonType: pokemonType.value
+                  pokemonType: pokemonType.value,
+                  pokemonColor: pokemonColor.value,
                 });
     this.closeModal();
     return false;

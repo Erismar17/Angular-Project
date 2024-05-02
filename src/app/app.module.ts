@@ -6,6 +6,7 @@ import { CardComponent } from './components/pokemons/card/card.component';
 import { PokemonsDetailsComponent } from './components/pokemons/pokemons-details/pokemons-details.component';
 import { PokemonsFormComponent } from './components/pokemons/pokemons-form/pokemons-form.component';
 import { PokemonInfService} from './services/pokemonInfService/pokemon-inf.service'
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { PokemonInfService} from './services/pokemonInfService/pokemon-inf.servi
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [
     PokemonInfService,

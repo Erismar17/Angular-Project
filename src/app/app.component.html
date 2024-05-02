@@ -4,27 +4,28 @@
 
 <section class="flex justify-around mt-5">
     <div>
-        <input list="type" type="text" id="searchType" placeholder="Buscar..." class="rounded-lg bg-blue-400 hover:bg-blue-500 outline-none p-2 text-white mr-3"/>
-            <datalist id="type">
-                <option value="Acero">
-                <option value="Agua">
-                <option value="Bicho">
-                <option value="Dragón">
-                <option value="Eléctrico">
-                <option value="Fantasma">
-                <option value="Fuego">
-                <option value="Hada">
-                <option value="Hielo">
-                <option value="Lucha">
-                <option value="Normal">
-                <option value="Planta">
-                <option value="Psíquico">
-                <option value="Roca">
-                <option value="Siniestro">
-                <option value="Tierra">
-                <option value="Veneno">
-                <option value="Volador">
-            </datalist>
+        <input type="text" (input)="onSearch($event)" placeholder="Buscar..." class="rounded-lg bg-blue-400 hover:bg-blue-500 outline-none p-2 text-white mr-3"/>
+        <select type="text" (change)="onSearch($event)" placeholder="Buscar..." class="select rounded-lg bg-blue-400 hover:bg-blue-500 outline-none p-2 text-white mr-3">
+            <option class="ml-5" disabled selected>Selecciona</option>
+            <option value="Acero">Acero</option>
+            <option value="Agua">Agua</option>
+            <option value="Bicho">Bicho</option>
+            <option value="Dragon">Dragón</option>
+            <option value="Electrico">Eléctrico</option>
+            <option value="Fantasma">Fantasma</option>
+            <option value="Fuego">Fuego</option>
+            <option value="Hada">Hada</option>
+            <option value="Hielo">Hielo</option>
+            <option value="Lucha">Lucha</option>
+            <option value="Normal">Normal</option>
+            <option value="Planta">Planta</option>
+            <option value="Psiquico">Psíquico</option>
+            <option value="Roca">Roca</option>
+            <option value="Siniestro">Siniestro</option>
+            <option value="Tierra">Tierra</option>
+            <option value="Veneno">Veneno</option>
+            <option value="Volador">Volador</option>
+        </select>
     </div>
     <div class="ml-3 add-pokemon">
         <button (click)="openModal()" class="bg-blue-400 hover:bg-blue-500 text-white rounded-lg flex p-2">Agregar un pokemon

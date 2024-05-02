@@ -1,8 +1,8 @@
 <div class="fixed inset-0 bg-black bg-opacity-30 flex justify-center items-center z-10">
     <div class="flex flex-col items-center bg-gray-200 border border-gray-200 rounded-lg shadow p-10">
     <h1 class="font-semibold text-xl text-center">Formulario para agregar un Pokémon</h1>
-        <form (submit)="addPokemon(pokemonNumber, pokemonNumberByRegion, pokemonImg, pokemonName, pokemonType)" class="flex flex-col mt-5">
-            <input #pokemonNumber type="number" placeholder="Número de Pokémon" class="rounded-lg bg-blue-400 outline-none p-2 text-white my-2">
+        <form (submit)="addPokemon(pokemonNumber, pokemonNumberByRegion, pokemonImg, pokemonName, pokemonType, pokemonColor)" class="flex flex-col mt-5">
+            <input #pokemonNumber type="number" placeholder="Número de Pokémon" class="rounded-lg bg-blue-400 outline-none p-2 text-white my-2" required>
             <input #pokemonNumberByRegion type="number" placeholder="Número de Pokémon de la región" class="rounded-lg bg-blue-400 outline-none p-2 text-white my-2">
             <label htmlFor="uploadFile" class="rounded-lg bg-blue-400 outline-none p-2 text-white my-2">Imagen del Pokémon:</label>
             <div>
@@ -21,28 +21,29 @@
                     <p class="text-xs text-gray-400 mt-2">PNG & JPG are Allowed</p>
                 </label>
             </div>
-            <input #pokemonName type="text" placeholder="Nombre del Pokémon" class="rounded-lg bg-blue-400 outline-none p-2 text-white my-2">
+            <input #pokemonName type="text" placeholder="Nombre del Pokémon" class="rounded-lg bg-blue-400 outline-none p-2 text-white my-2" required>
             <div class="flex justify-between">
                 <label class="rounded-lg bg-blue-400 outline-none p-2 text-white">Tipo de Pokémon:</label>
-                    <select #pokemonType class="rounded-lg bg-blue-400 text-white">
-                        <option>Acero</option>
-                        <option>Agua</option>
-                        <option>Bicho</option>
-                        <option>Dragón</option>
-                        <option>Eléctrico</option>
-                        <option>Fantasma</option>
-                        <option>Fuego</option>
-                        <option>Hada</option>
-                        <option>Hielo</option>
-                        <option>Lucha</option>
-                        <option>Normal</option>
-                        <option>Planta</option>
-                        <option>Psíquico</option>
-                        <option>Roca</option>
-                        <option>Siniestro</option>
-                        <option>Tierra</option>
-                        <option>Veneno</option>
-                        <option>Volador</option>
+                    <select #pokemonType #pokemonColor class="rounded-lg bg-blue-400 text-white" required>
+                        <option class="ml-5" disabled selected>Selecciona</option>
+                        <option value="Acero" class="type-steel">Acero</option>
+                        <option value="Agua" class="type-water">Agua</option>
+                        <option value="Bicho" class="type-bug">Bicho</option>
+                        <option value="Dragon" class="type-dragon">Dragón</option>
+                        <option value="Electrico" class="type-electric">Eléctrico</option>
+                        <option value="Fantasma" class="type-ghost">Fantasma</option>
+                        <option value="Fuego" class="type-fire">Fuego</option>
+                        <option value="Hada" class="type-fairy">Hada</option>
+                        <option value="Hielo" class="type-ice">Hielo</option>
+                        <option value="Lucha" class="type-fight">Lucha</option>
+                        <option value="Normal" class="type-normal">Normal</option>
+                        <option value="Planta" class="type-plant">Planta</option>
+                        <option value="Psiquico" class="type-psychic">Psíquico</option>
+                        <option value="Roca" class="type-rock">Roca</option>
+                        <option value="Siniestro" class="type-sinester">Siniestro</option>
+                        <option value="Tierra" class="type-ground">Tierra</option>
+                        <option value="Veneno" class="type-poison">Veneno</option>
+                        <option value="Volador" class="type-flying">Volador</option>
                     </select>
             </div>
             <button class="rounded-lg bg-blue-400 hover:bg-blue-500 outline-none p-2 text-white mt-5">Guardar</button>

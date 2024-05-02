@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalSwitchService } from './services/modalService/modal-switch.service';
+import { PokemonFilterService } from './services/pokemonFilter/pokemon-filter.service';
 
 @Component({
   selector: 'app-root',
@@ -9,9 +10,10 @@ import { ModalSwitchService } from './services/modalService/modal-switch.service
 export class AppComponent implements OnInit{
   modalSwitch: boolean = false;
 
-  constructor(private modalSwitchS: ModalSwitchService){
-
-  }
+  constructor(
+    private modalSwitchS: ModalSwitchService,
+    private searchFilterS: PokemonFilterService
+  ) { }
 
   ngOnInit(){
     this.modalSwitchS.$modal.subscribe((valor)=> {this.modalSwitch = valor});
@@ -19,5 +21,10 @@ export class AppComponent implements OnInit{
 
   openModal() {
     this.modalSwitch = true;
+  }
+
+  onSearch (event: any): void {
+    const term = event?.target?.value||'';
+    this.searchFilterS.setSearch(term);
   }
 }

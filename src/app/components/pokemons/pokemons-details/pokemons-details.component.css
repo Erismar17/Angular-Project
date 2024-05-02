@@ -9,3 +9,93 @@
 .card:hover {
 animation: moveCard 0.3s ease-in-out;
 }
+
+.Acero {
+    background-color: #757575;
+    border-radius: 6px;
+}
+
+.Agua {
+    background-color: #00c3ff;
+    border-radius: 6px;
+}
+
+.Bicho {
+    background-color: #b15c24;
+    border-radius: 6px;
+}
+
+.Dragon {
+    background-color: #ff7b00;
+    border-radius: 6px;
+}
+
+.Electrico {
+    background-color: #6882c9;
+    border-radius: 6px;
+}
+
+.Fantasma {
+    background-color: #d8d8d8;
+    border-radius: 6px;
+}
+
+.Fuego {
+    background-color: #ff0000;
+    border-radius: 6px;
+}
+
+.Hada {
+    background-color: #ff7bc4;
+    border-radius: 6px;
+}
+
+.Hielo {
+    background-color: #2600ff;
+    border-radius: 6px;
+}
+
+.Lucha {
+    background-color: #664bff;
+    border-radius: 6px;
+}
+
+.Normal {
+    background-color: #5c5c5c;
+    border-radius: 6px;
+}
+
+.Planta {
+    background-color: #1dbb17;
+    border-radius: 6px;
+}
+
+.Psiquico {
+    background-color: #ffd900;
+    border-radius: 6px;
+}
+
+.Roca {
+    background-color: #a56c4b;
+    border-radius: 6px;
+}
+
+.Siniestro {
+    background-color: #9b0079;
+    border-radius: 6px;
+}
+
+.Tierra {
+    background-color: #00ce00;
+    border-radius: 6px;
+}
+
+.Veneno {
+    background-color: #d300c8;
+    border-radius: 6px;
+}
+
+.Volador {
+    background-color: #27a1da;
+    border-radius: 6px;
+}
